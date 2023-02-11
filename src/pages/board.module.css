@@ -8,3 +8,10 @@
     flex-direction: column;
   }
 }
+
+.boardContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+}
