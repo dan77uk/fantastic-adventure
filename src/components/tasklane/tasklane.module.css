@@ -1,0 +1,18 @@
+.laneWrapper {
+  padding: 0;
+  background: rgb(235, 235, 235);
+  border-radius: 5px;
+  min-height: 50vh;
+  width: 20vw;
+
+  @media (max-width: 768px) {
+    margin-bottom: 5%;
+  }
+}
+
+.laneWrapper h2 {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px solid rgb(205, 205, 205);
+}
