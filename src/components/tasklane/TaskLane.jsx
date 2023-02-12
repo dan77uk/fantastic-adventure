@@ -10,7 +10,7 @@ export default function TaskLane({ title, loading, error, tasks }) {
       ) : (
         tasks.map((task) => (
           <Task
-            key={task.id}
+            key={task.id + task.title}
             id={task.id}
             title={task.title}
             body={task.body}
