@@ -1,52 +1,52 @@
 {
   "tasks": [
     {
-      "id:": 1,
+      "id": 1,
       "project_id": "p123",
       "project_title": "Test Project",
       "project_owner": "123",
       "title": "Fix navigation bug",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas dictum libero, vel tristique odio pulvinar vitae.",
-      "lane": 1
+      "lane": 4
     },
     {
-      "id:": 2,
+      "id": 2,
       "project_id": "p123",
       "project_title": "Test Project",
       "project_owner": "123",
       "title": "Release new website",
       "body": "hasellus eleifend lacus vitae est ultrices placerat. Nunc at risus id risus venenatis laoreet sit amet cursus neque.",
-      "lane": 2
+      "lane": 3
     },
     {
-      "id:": 3,
+      "id": 3,
       "project_id": "p123",
       "project_title": "Test Project",
       "project_owner": "123",
       "title": "Change button color",
       "body": "Suspendisse ac lorem a neque tempus luctus non aliquam sapien. Cras ut lacus bibendum, placerat nibh eu, tempus neque.",
-      "lane": 3
+      "lane": 4
     },
     {
-      "id:": 4,
+      "id": 4,
       "project_id": "p123",
       "project_title": "Test Project",
       "project_owner": "123",
       "title": "Deploy server on acceptance environment",
       "body": "Pellentesque pharetra fermentum sapien, aliquet ultrices ligula mattis porttitor.",
-      "lane": 3
+      "lane": 2
     },
     {
-      "id:": 5,
+      "id": 5,
       "project_id": "p123",
       "project_title": "Test Project",
       "project_owner": "123",
       "title": "Change layout for the content page",
       "body": "Cras tellus ligula, mattis at facilisis eu, ultricies vel elit. Ut aliquam volutpat lacus, a rutrum sem vulputate non.",
-      "lane": 3
+      "lane": 2
     },
     {
-      "id:": 6,
+      "id": 6,
       "project_id": "p123",
       "project_title": "Test Project",
       "project_owner": "123",
@@ -55,13 +55,13 @@
       "lane": 4
     },
     {
-      "id:": 7,
+      "id": 7,
       "project_id": "p123",
       "project_title": "Test Project",
       "project_owner": "123",
       "title": "Create new database instance",
       "body": "Curabitur nec sem lorem. Donec venenatis, arcu vitae malesuada consequat, dolor ante placerat mi, in fermentum diam ipsum id libero.",
-      "lane": 4
+      "lane": 1
     }
   ]
 }
