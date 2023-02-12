@@ -1,7 +1,6 @@
-import TaskLane from "../components/tasklane/TaskLane";
+import TaskLane from "../../components/tasklane/TaskLane";
 import styles from "./board.module.css";
-import { useState, useEffect } from "react";
-import axios from "axios";
+import useDataFetching from "../../../hooks/useDataFetching";
 
 const taskLanes = [
   { id: 1, title: "To Do" },
@@ -11,23 +10,9 @@ const taskLanes = [
 ];
 
 export default function Board() {
-  const [loading, setIsLoading] = useState(true);
-  const [tasks, setTasks] = useState([]);
-  const [error, setError] = useState("");
-
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const result = await axios.get("http://localhost:3001/tasks");
-        setTasks(result.data);
-        setIsLoading(false);
-      } catch (error) {
-        setError(error.message);
-        setIsLoading(false);
-      }
-    }
-    fetchData();
-  }, []);
+  const [loading, error, tasks] = useDataFetching(
+    "http://localhost:3001/tasks"
+  );
 
   return (
     <div className={styles.boardWrapper}>
