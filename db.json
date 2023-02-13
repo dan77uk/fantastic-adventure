@@ -25,7 +25,7 @@
       "project_owner": "123",
       "title": "Change button color",
       "body": "Suspendisse ac lorem a neque tempus luctus non aliquam sapien. Cras ut lacus bibendum, placerat nibh eu, tempus neque.",
-      "lane": 4
+      "lane": 3
     },
     {
       "id": 4,
@@ -43,7 +43,7 @@
       "project_owner": "123",
       "title": "Change layout for the content page",
       "body": "Cras tellus ligula, mattis at facilisis eu, ultricies vel elit. Ut aliquam volutpat lacus, a rutrum sem vulputate non.",
-      "lane": 1
+      "lane": 2
     },
     {
       "id": 6,
