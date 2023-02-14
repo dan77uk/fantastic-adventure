@@ -34,7 +34,7 @@
       "project_owner": "123",
       "title": "Deploy server on acceptance environment",
       "body": "Pellentesque pharetra fermentum sapien, aliquet ultrices ligula mattis porttitor.",
-      "lane": 2
+      "lane": 1
     },
     {
       "id": 5,
@@ -43,7 +43,7 @@
       "project_owner": "123",
       "title": "Change layout for the content page",
       "body": "Cras tellus ligula, mattis at facilisis eu, ultricies vel elit. Ut aliquam volutpat lacus, a rutrum sem vulputate non.",
-      "lane": 2
+      "lane": 3
     },
     {
       "id": 6,
@@ -52,7 +52,7 @@
       "project_owner": "123",
       "title": "Complete the registration flow",
       "body": "In vel commodo ipsum. Duis id ipsum semper, condimentum ipsum sit amet, maximus massa.",
-      "lane": 1
+      "lane": 2
     },
     {
       "id": 7,
@@ -61,7 +61,7 @@
       "project_owner": "123",
       "title": "Create new database instance",
       "body": "Curabitur nec sem lorem. Donec venenatis, arcu vitae malesuada consequat, dolor ante placerat mi, in fermentum diam ipsum id libero.",
-      "lane": 3
+      "lane": 4
     }
   ],
   "users": [

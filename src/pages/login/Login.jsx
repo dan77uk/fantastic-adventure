@@ -6,7 +6,7 @@ import {
   createUserWithEmailAndPassword,
 } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { auth } from "../../../utils/firebase";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
@@ -14,12 +14,13 @@ import { useRef } from "react";
 
 export default function Login() {
   const [user, loading] = useAuthState(auth);
-  // if (user) return <Navigate to="/dashboard" replace={true} />;
+  const navigate = useNavigate();
 
   const googleProvider = new GoogleAuthProvider();
   const googleLogIn = async () => {
     try {
-      const result = await signInWithPopup(auth, googleProvider);
+      await signInWithPopup(auth, googleProvider);
+      navigate("/dashboard");
     } catch (error) {
       console.log(error);
     }
@@ -29,7 +30,7 @@ export default function Login() {
   const githubLogIn = async () => {
     try {
       const result = await signInWithPopup(auth, githubProvider);
-      console.log(result);
+      navigate("/dashboard");
     } catch (error) {
       console.log(error.code);
     }
@@ -53,7 +54,6 @@ export default function Login() {
         console.log("error message: ", error.message);
       });
   }
-  if (user) return <Navigate to="/dashboard" replace={true} />;
 
   return (
     <section className={styles.wrapper}>
@@ -62,13 +62,17 @@ export default function Login() {
         <form onSubmit={handleSignUp}>
           <div>
             <label htmlFor="email">Email</label>
-            <input id="email" ref={emailRef} />
-            <p>Email must ...</p>
+            <input id="email" ref={emailRef} type="email" required />
           </div>
           <div>
             <label htmlFor="password">Password</label>
-            <input id="password" ref={passwordRef} />
-            <p>Password must ...</p>
+            <input
+              id="password"
+              type="password"
+              required
+              minLength="6"
+              ref={passwordRef}
+            />
           </div>
           <button>Sign Up</button>
         </form>

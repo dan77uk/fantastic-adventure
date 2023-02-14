@@ -6,24 +6,21 @@ import Backlog from "./pages/backlog/Backlog";
 import Board from "./pages/board/Board";
 import Login from "./pages/login/Login";
 import Splash from "./pages/splash/Splash";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../utils/firebase";
 
 export default function App() {
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [user, loading] = useAuthState(auth);
+
   return (
     <div>
       <Header />
-      {!loggedIn ? (
-        <Routes>
-          <Route path="/" element={<Splash />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-        </Routes>
-      ) : (
-        <>
-          <Board />
-          <Backlog />
-        </>
-      )}
+
+      <Routes>
+        <Route path="/" element={<Splash />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
     </div>
   );
 }
