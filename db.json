@@ -16,7 +16,7 @@
       "project_owner": "123",
       "title": "Release new website",
       "body": "hasellus eleifend lacus vitae est ultrices placerat. Nunc at risus id risus venenatis laoreet sit amet cursus neque.",
-      "lane": 3
+      "lane": 1
     },
     {
       "id": 3,
@@ -34,7 +34,7 @@
       "project_owner": "123",
       "title": "Deploy server on acceptance environment",
       "body": "Pellentesque pharetra fermentum sapien, aliquet ultrices ligula mattis porttitor.",
-      "lane": 1
+      "lane": 2
     },
     {
       "id": 5,

@@ -2,6 +2,7 @@ import { auth } from "../utils/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import Board from "./pages/board/Board";
 
 export default function Dashboard() {
   const [user, loading] = useAuthState(auth);
@@ -11,6 +12,7 @@ export default function Dashboard() {
   return (
     <section>
       <h3>Dashboard</h3>
+      <Board />
     </section>
   );
 }
