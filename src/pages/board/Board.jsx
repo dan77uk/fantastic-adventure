@@ -1,8 +1,9 @@
 import TaskLane from "../../components/tasklane/TaskLane";
 import styles from "./board.module.css";
-import useDataFetching from "../../../hooks/useDataFetching";
+// import useDataFetching from "../../../hooks/useDataFetching";
 import { useState, useEffect } from "react";
-import axios from "axios";
+// import axios from "axios";
+import projectService from "./../../services/projects";
 
 const taskLanes = [
   { id: 1, title: "To Do" },
@@ -12,15 +13,18 @@ const taskLanes = [
 ];
 
 export default function Board() {
-  const [loading, error, data] = useDataFetching("http://localhost:3001/tasks");
+  // const [loading, error, data] = useDataFetching(
+  //   "http://localhost:3001/api/projects"
+  // );
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
-    setTasks(data);
-  }, [data]);
+    projectService.getAll().then((response) => {
+      setTasks(response);
+    });
+  }, []);
 
   function onDragStart(event, id) {
-    console.log(id);
     event.dataTransfer.setData("id", id);
   }
 
@@ -39,17 +43,7 @@ export default function Board() {
     });
     setTasks(updatedTasks);
     // patch database with updated status
-    (async function patchTask() {
-      try {
-        const result = await axios({
-          method: "PATCH",
-          url: `http://localhost:3001/tasks/${id}`,
-          data: { lane: laneId },
-        });
-      } catch (error) {
-        console.log(error);
-      }
-    })();
+    projectService.moveTask(id, laneId);
   }
 
   return (
@@ -60,8 +54,8 @@ export default function Board() {
             key={lane.id}
             laneId={lane.id}
             title={lane.title}
-            loading={loading}
-            error={error}
+            // loading={loading}
+            // error={error}
             tasks={tasks.filter((task) => task.lane === lane.id)}
             onDragStart={onDragStart}
             onDragOver={onDragOver}
