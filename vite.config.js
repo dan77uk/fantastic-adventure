@@ -21,5 +21,5 @@ const rewriteSlashToIndexHtml = () => {
 export default defineConfig({
   plugins: [react()],
   appType: "mpa", // disable history fallback
-  plugins: [rewriteSlashToIndexHtml()],
+  // plugins: [rewriteSlashToIndexHtml()],
 });
